@@ -1,0 +1,22 @@
+<h1>Games#new</h1>
+<p>Find me in app/views/games/new.html.erb</p>
+
+<% @grid.each do |letter| %>
+  <ul id="list" class="list-group ">
+    <li class="list-group-item m-3">
+      <%= letter %>
+    </li>
+  </ul>
+<%end %>
+
+<% @start_time  %>
+
+<form action="/score" method="get">
+  <%= hidden_field_tag :grid, @grid %>
+  <input type="text" name="words" placeholder="Enter your words">
+  <input type="submit">
+  <%= hidden_field_tag :start_time, @start_time %>
+  <% end_time = Time.now  %>
+</form>
+
+

@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+
+#list {
+  display: inline-block;
+}
+
+#list li {
+  background-color: #3498DC;
+  color: white;
+  font-family: 'Cinzel', serif;
+}
