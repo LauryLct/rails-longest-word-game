@@ -1,7 +1,15 @@
 <h1>Games#score</h1>
 <p>Find me in app/views/games/score.html.erb</p>
 
+<% @total_score %>
 
-<p> <%= @score %></p>
+<p> <%= @message %></p>
+<p> Your score : <%= @score %></p>
+<p> Your total score : <%= @total_score %></p>
 
-<%= link_to 'Restart the game', '/new' %>
+<form action="/new">
+  <%= hidden_field_tag :total_score, @total_score %>
+  <input type="submit" value="Restart the game">
+</form>
+
+

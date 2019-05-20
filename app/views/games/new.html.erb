@@ -12,11 +12,15 @@
 <% @start_time  %>
 
 <form action="/score" method="get">
-  <%= hidden_field_tag :grid, @grid %>
+  <%= hidden_field_tag :grid, @grid.join %>
   <input type="text" name="words" placeholder="Enter your words">
   <input type="submit">
   <%= hidden_field_tag :start_time, @start_time %>
+  <%= hidden_field_tag :total_score, @total_score %>
   <% end_time = Time.now  %>
 </form>
+
+<p> Your total score : <%= @total_score %></p>
+
 
 
